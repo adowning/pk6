@@ -1,0 +1,15 @@
+{
+  "name": "notesApp-parseServer",
+  "version": "1.0.0",
+  "description": "A Notes App using parse-server & parse-dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "parse-dashboard": "^1.2.0",
+    "parse-server": "^3.1.1"
+  }
+}

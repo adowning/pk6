@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+
+    <v-content>
+      <login/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Login from './components/login'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    Login
+  },
+  data () {
+    return {
+      //
+    }
+  },
+  mounted(){
+	this.$geb.emit({id:"system-ready"})
+  },
+  created(){
+	// this.$geb.emit({"asdf":"asdf"})
+// 	this.$geb.getBus().subscribe(data => {
+//       console.log(data)
+//       // Do anything you want with 'data'
+//   })
+
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
